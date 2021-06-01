@@ -3,13 +3,13 @@ import numpy as np
 from matplotlib import pyplot as plt
 
 def transposta(m):
-	width = len(m[0])
-	height = len(m)
-	resposta=[[0 for x in range(width)] for y in range(height)]	
-	for i in range(height):
-		for j in range(width):
+	largura = len(m[0])
+	altura = len(m)
+	resposta=[[0 for x in range(largura)] for y in range(altura)]	
+	for i in range(altura):
+		for j in range(largura):
 			resposta[i][j] = m[i][j]
-	return np.array(resposta)
+	return np.transpose(resposta)
 
 img = cv.imread('img/zeta.png')
 img = cv.imread('img/unifafibe.jpg')
